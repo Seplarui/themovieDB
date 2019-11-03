@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GenerosComponent } from './components/generos/generos.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: 'generos', component: GenerosComponent }
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({

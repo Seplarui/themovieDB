@@ -1,5 +1,14 @@
-{{showsToday | json}}
-
-<p *ngFor= "let showToday of showsToday">
-  {{showToday.name}}
-</p>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let showToday of showsToday | paginate: {itemsPerPage: 7, currepntPage: pageActual}">
+      <th scope="row">#</th>
+      <td>{{showToday.name}}</td>
+    </tr>
+  </tbody>
+</table>
