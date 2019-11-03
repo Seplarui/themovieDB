@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from 'src/app/services/data-api.service';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-generos',
@@ -22,7 +21,7 @@ export class GenerosComponent implements OnInit {
     this.dataApi.getGenerosApi().subscribe((generos) => console.log(generos));
     // this.dataApi.getGenerosApi().subscribe((generos: []) => this.generos = generos);
     // this.dataApi.getGenerosApi().subscribe(data => this.generos = data[this.generos]);
-    this.dataApi.getGenerosApi().subscribe((generos: any[]) => (this.generos = generos));
+    this.dataApi.getGenerosApi().subscribe((generos: any) => (this.generos = generos));
   }
 
 }
