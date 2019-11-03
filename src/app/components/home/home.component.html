@@ -1,3 +1,5 @@
-<p>
-  home works!
+{{showsToday | json}}
+
+<p *ngFor= "let showToday of showsToday">
+  {{showToday.name}}
 </p>

@@ -18,10 +18,10 @@ export class GenerosComponent implements OnInit {
 
   getGeneros() {
 
-    this.dataApi.getGenerosApi().subscribe((generos) => console.log(generos));
+    this.dataApi.getShowsTodayApi().subscribe((generos) => console.log(generos));
     // this.dataApi.getGenerosApi().subscribe((generos: []) => this.generos = generos);
     // this.dataApi.getGenerosApi().subscribe(data => this.generos = data[this.generos]);
-    this.dataApi.getGenerosApi().subscribe((generos: any) => (this.generos = generos));
+    this.dataApi.getShowsTodayApi().subscribe((generos: any) => (this.generos = generos));
   }
 
 }
